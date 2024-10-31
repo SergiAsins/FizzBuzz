@@ -29,10 +29,14 @@ public class FizzbuzzTest {
 
 
     @Test
-    @DisplayName("Test if number is divisible by 5")
+    @DisplayName("Test if number is divisible by 3 and 5")
     void test_whenTheNumberIsDivisibleByThreeAndFive_theReturnFizzBuzz() {
         //Given
-
+        Fizzbuzz fizzbuzz = new Fizzbuzz();
+        //When
+        String result = fizzbuzz.checkNumber((15));
+        //Then
+        assertEquals("FizzBuzz", result);
     }
 
 }
