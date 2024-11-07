@@ -7,7 +7,7 @@ public class FizzbuzzTest {
 
     @Test
     @DisplayName("Test if number is divisible by 3")
-    void test_whenTheNumberIsDivisibleByThree_theReturnFizz() {
+    void test_whenTheNumberIsDivisibleByThree_thenReturnFizz() {
         // Given
         Fizzbuzz fizzbuzz = new Fizzbuzz();
         // When
@@ -18,7 +18,7 @@ public class FizzbuzzTest {
 
     @Test
     @DisplayName("Test if number is divisible by 5")
-    void test_whenTheNumberIsDivisibleByFive_theReturnBuzz() {
+    void test_whenTheNumberIsDivisibleByFive_thenReturnBuzz() {
         // Given
         Fizzbuzz fizzbuzz = new Fizzbuzz();
         // When
@@ -30,7 +30,7 @@ public class FizzbuzzTest {
 
     @Test
     @DisplayName("Test if number is divisible by 3 and 5")
-    void test_whenTheNumberIsDivisibleByThreeAndFive_theReturnFizzBuzz() {
+    void test_whenTheNumberIsDivisibleByThreeAndFive_thenReturnFizzBuzz() {
         //Given
         Fizzbuzz fizzbuzz = new Fizzbuzz();
         //When
@@ -38,6 +38,19 @@ public class FizzbuzzTest {
         //Then
         assertEquals("FizzBuzz", result);
     }
+
+    @Test
+    @DisplayName("Test if number is not divisible by 3 neither 5")
+    void test_whenTheNumberIsNotDivisibleByThreeNeitherFive_thenReturnSameNumber(){
+        //Given
+        Fizzbuzz fizzbuzz = new Fizzbuzz();
+        //When
+        int number = 7;
+        String result = fizzbuzz.checkNumber(number);
+        //Then
+        assertEquals("7", result);
+    }
+
 
 }
 
